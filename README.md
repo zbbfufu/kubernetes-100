@@ -16,7 +16,7 @@ gcloud config set project k8s-20210119
 
 Configure `.kube/config` to access the cluster:
 ```shell
-gcloud container clusters get-credentials k8s-fundamentals --region europe-west1 --project k8s-20210119
+gcloud container clusters get-credentials k8s-fundamentals --zone europe-west1-d --project k8s-20210119
 ```
 
 Then enable auto-completion for Bash:
