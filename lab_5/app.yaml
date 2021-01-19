@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: simple-hello
+spec:
+  containers:
+    - name: spring-app
+      image: eu.gcr.io/k8s-20210119/simple-hello:v1
+      env:
+        - name: SPRING_USERNAME
+          valueFrom:
+            configMapKeyRef:
+              name: spring-configmap
+              key: username
