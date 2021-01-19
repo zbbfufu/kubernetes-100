@@ -25,9 +25,10 @@ source <(kubectl completion bash) # setup autocomplete in bash into the current 
 echo "source <(kubectl completion bash)" >> ~/.bashrc # add autocomplete permanently to your bash shell.
 ```
 
-Finally, create your own namespace, based on your first name:
+Finally, create your own namespace, based on your first name, and update the context to use it:
 ```shell
 kubectl create namespace <firstname>
+kubectl config set-context --current --namespace=<namespace>
 ```
 
 You're ready to go!
